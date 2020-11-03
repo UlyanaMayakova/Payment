@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Оплата</string>
+    <string name="hint_money">Введите сумму</string>
+    <string name="bank_payment">С банковской карты</string>
+    <string name="mobile_payment">С мобильного телефона</string>
+    <string name="cash_payment">Наличными по адресу</string>
+    <string name="choose_payment">Выберите способ оплаты</string>
+    <string name="information">Введите инормацию об оплате</string>
+    <string name="hint_bank">Введите номер карты</string>
+    <string name="hint_mobile">Введите номер телефона</string>
+    <string name="hint_cash">Введите адрес</string>
+    <string name="ok_btn">Ок</string>
+</resources>
