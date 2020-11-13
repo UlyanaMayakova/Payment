@@ -27,11 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inIt();
-    }
-
-    private void inIt() {
-
         moneyInput = findViewById(R.id.money);
         bank = findViewById(R.id.bankCheck);
         mobile = findViewById(R.id.mobileCheck);
@@ -45,9 +40,8 @@ public class MainActivity extends AppCompatActivity {
             money = Integer.parseInt(moneyInput.getText().toString());
         } catch (Exception e) {
             Toast.makeText(MainActivity.this, "Введите число", Toast.LENGTH_LONG).show();
-        } finally {
-             finalMoney = money;
         }
+        finalMoney = money;
 
         bank.setOnCheckedChangeListener(checkedChangeListener);
         mobile.setOnCheckedChangeListener(checkedChangeListener);
@@ -56,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int money = 0;
+                final int finalMoney;
+                try {
+                    money = Integer.parseInt(moneyInput.getText().toString());
+                } catch (Exception e) {
+                    Toast.makeText(MainActivity.this, "Введите число", Toast.LENGTH_LONG).show();
+                }
+                finalMoney = money;
                 String result = "Оплата " + finalMoney + " рублей";
                 Toast.makeText(MainActivity.this, result , Toast.LENGTH_LONG).show();
             }
